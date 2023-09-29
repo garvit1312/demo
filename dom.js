@@ -62,12 +62,57 @@
 //secondItem.style.color='coral';
 
 //QUERY SELECTORAlLL//
-var titles=document.querySelectorAll('.title');
-console.log(titles);
-titles[0].textContent='hello';
-var odd=document.querySelectorAll('li:nth-child(odd)');
-var even=document.querySelectorAll('li:nth-child(even)');
-for(var i=0;i<odd.length;i++){
-    odd[i].style.backgroundColor='#f4f4f4';
-    even[i].style.backgroundColor='#ccc';
-}
+//var titles=document.querySelectorAll('.title');
+//console.log(titles);
+//titles[0].textContent='hello';
+//var odd=document.querySelectorAll('li:nth-child(odd)');
+//var even=document.querySelectorAll('li:nth-child(even)');
+//for(var i=0;i<odd.length;i++){
+ //   odd[i].style.backgroundColor='#f4f4f4';
+  //  even[i].style.backgroundColor='#ccc';
+//}
+
+//TRAVERSING THE DOM//
+var itemList =document.querySelector('#items');
+//parentNode
+//console.log(itemList.parentNode);
+//itemList.parentNode.style.backgroundColor='#f4f4f4';
+
+//parentElement
+//console.log(itemList.parentElement);
+//itemList.parentElement.style.backgroundColor='#f4f4f4';
+
+//childNodes
+//console.log(itemList.childNodes);
+//console.log(itemList.children);
+//console.log(itemList.children[1]);
+//itemList.children[1].style.backgroundColor='red';
+//FirstChild
+//console.log(itemList.firstChild);
+//FirstElementChild
+//console.log(itemList.firstElementChild);
+
+//nextSibling
+//console.log(itemList.nextSibling);
+//console.log(itemList.nextElementSibling);
+//console.log(itemList.previousSibling);
+//console.log(itemList.previousElementSibling);
+
+//createElement
+//create a div
+var newDiv=document.createElement('div');
+//AddClass
+newDiv.className='hello';
+//AddId
+newDiv.id='hello1';
+//add attr
+newDiv.setAttribute('title','hello Div');
+//create text node
+var newDivText=document.createTextNode('hello World');
+//Add text to div
+newDiv.appendChild(newDivText);
+
+var container= document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+console.log(newDiv);
+container.insertBefore(newDiv,h1);
